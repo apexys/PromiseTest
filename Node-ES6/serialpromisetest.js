@@ -1,3 +1,5 @@
+
+
 var urlproto = "http://localhost:8000/files/"
 var i = 0;
 var array = [];
@@ -21,4 +23,5 @@ var makeReq = (url) => new Promise((resolve, reject)=>{
 });
 
 array = array.map(makeReq);
-Promise.all(array).then((ar) => console.log("finished: " + items));
+var helpers = require('./helpers.js');
+helpers.PromiseSerialAll(array).then((ar) => console.log("finished: " + items));

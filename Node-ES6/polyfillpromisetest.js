@@ -1,3 +1,5 @@
+
+require('es6-promise/auto');
 var urlproto = "http://localhost:8000/files/"
 var i = 0;
 var array = [];
